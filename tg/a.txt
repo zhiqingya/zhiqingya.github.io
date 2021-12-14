@@ -1,0 +1,19 @@
+
+{"code":200,
+"data":{"name":"\u59dc\u5b50\u7259",
+"alias":"\u592a\u53e4\u9b54\u5bfc-
+\u59dc\u5b50\u7259","photo":"https:\/\/game.
+gtimg.cn\/images\/yxzj\/img201606\/
+heroimg\/148\/148.jpg",
+"area":"\u9547\u576a\u53bf",
+"areaPower":"1053",
+"city":"\u91d1\u660c\u5e02",
+"cityPower":"3305",
+"province":"\u5929\u6d25\u5e02",
+"provincePower":"6036",
+"platform":"\u5b89\u5353Q\u533a",
+"stamp":"1629615540",
+"updatetime":"2021\/08\/22 14:59:00",
+"clientIP":"36.157.11.98"},
+"msg":"\u5185\u90e8\u63a5\u53e3\uff0c\u8
+bf7\u52ff\u6cc4\u9732"}
