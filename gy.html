@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打赏</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .marquee-container {
+            height: 150px; /* 容器高度 */
+            overflow: hidden;
+            position: relative;
+            margin-top: 30px; /* 与图片间距 */
+            background-color: #f9f9f9; /* 背景颜色 */
+            border-radius: 10px; /* 圆角 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            padding: 10px; /* 内边距 */
+        }
+
+        .marquee {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            animation: marquee 12s linear infinite; /* 控制滚动的速度和循环 */
+        }
+
+        @keyframes marquee {
+            0% { transform: translateY(100%); } /* 从列表外部开始 */
+            100% { transform: translateY(-100%); } /* 滚动到列表外部 */
+        }
+
+        .marquee ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            line-height: 2;
+            font-size: 18px; /* 字体大小 */
+            color: #333; /* 字体颜色 */
+            text-align: center; /* 文本居中 */
+        }
+
+        .marquee li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>感谢您的支持</h1>
+    </header>
+    <main>
+        <section class="donation-info">
+            <h2>联系我们</h2>
+            <p><strong>QQ群：</strong>88813694</p>
+            <p><strong>Email：</strong>zhiqingya@foxmail.com</p>
+            <p>网站的服务器+域名+维护也需要一定的成本，您可以扫免费的红包打赏给我们，这是对我们最大的支持！</p>
+        </section>
+
+        <section class="donation-images" style="text-align: center; margin-top: 30px;">
+            <h2>打赏二维码</h2>
+            <div class="image-wrapper" style="display: flex; justify-content: space-around; margin-top: 20px;">
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/hb.jpg" alt="收款码1" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/zfb.jpg" alt="收款码2" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/wx.png" alt="收款码3" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </section>
+
+        <section class="thanks-marquee">
+            <h2>特别感谢</h2>
+            <div class="marquee-container">
+                <div class="marquee">
+                    <ul>
+                        <li>@致情吖---搭建作者</li>
+                        <li>@momktm---提供服务器</li>
+                        <li>@企鹅君punguin---提供固件及工具</li>
+                        <li>@基安小菜鸡---提供工具</li>
+                        <li>@mznx115_---提供工具</li>
+                        <li>@JiuXia2025---提供工具</li>
+                        <li>@爱吃西瓜的萍萍---提供工具</li>
+                        <li>@小陈同学---提供固件</li>
+                        <li>@把你发配到沙勒---提供固件</li>
+                        <li>@哎呀啧---提供固件</li>
+                          <li>@仲夏夜之幻---提供固件</li>
+                        <li>@dajb---提供固件</li>
+                        <li>@卧龙岗的新手---提供切卡密码</li>
+                                                <li>@jsbsbxjxh66---提供切卡固件</li>
+                        <li>@酷铵水遍---提供固件</li>
+                        <li>@天干物燥o小心火烛---提供切卡密码</li>
+                        
+                        <li>@酷基鸭---提供切卡密码</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright@2024 打赏中心</p>
+    </footer>
+</body>
+</html>
