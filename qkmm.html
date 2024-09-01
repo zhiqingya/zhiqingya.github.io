@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -80,6 +79,33 @@
             padding: 10px;
             z-index: 1000;
         }
+
+        /* 返回按钮样式 */
+        .back-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background-color: rgba(128, 128, 128, 0.9);
+        }
+        .back-button svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
     </style>
 </head>
 <body>
@@ -97,193 +123,53 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>纽曼</td>
-                    <td>zx952#</td>
-                </tr>
-                
-                
-               <tr>
-                    <td>海尔</td>
-                    <td>az952#</td>
-                </tr>
-                
-                
-                <tr>
-                    <td>爱国者</td>
-                    <td>UFIadmin1234</td>
-                </tr>
-                
-                
-                
-                
-                     <tr>
-                    <td>长城P1</td>
-                    <td>boge*#</td>
-                </tr>   
-
-
-                <tr>
-                    <td>友猫761</td>
-                    <td>az952#</td>
-                </tr>
-                
-                
-                
-                  <tr>
-                    <td>黑疆讯</td>
-                    <td>az952#</td>
-                </tr>
-                
-                  <tr>
-                    <td>雷胜羽</td>
-                    <td>UFIadmin88888</td>
-                </tr>
-                
-                
-                  <tr>
-                    <td>展锐WiFi6</td>
-                    <td>YH888888</td>
-                </tr>
-                
-                
-                  <tr>
-                    <td>展锐</td>
-                    <td>GJ12eN8das13NB12</td>
-                </tr>   
-                
-                     <tr>
-                    <td>闪讯宝asr</td>
-                    <td>GJ12eN8das13NB12</td>
-                </tr>   
-                
-                  <tr>
-                    <td>海尔1869y</td>
-                    <td>HAIER0312</td>
-                </tr>
-                
-                
-                  <tr>
-                    <td>海尔1358</td>
-                    <td>HAIER0312</td>
-                </tr>
-                
-                
-                  <tr>
-                    <td>xscm</td>
-                    <td>xscm888</td>
-                </tr>
-                
-                  <tr>
-                    <td>FY_uz801_v3.0</td>
-                    <td>xscm888</td>
-                </tr>   
-                
-                  <tr>
-                    <td>迅优</td>
-                    <td>boge*#</td>
-                </tr>
-                
-                
-                     <tr>
-                    <td>芷荷</td>
-                    <td>IMEI后6位+66</td>
-                </tr>   
-
-     <tr>
-                    <td>新讯</td>
-                    <td>IMEI后6位+66</td>
-                </tr>   
-                
-                  <tr>
-                    <td>书海asr_jz10c</td>
-                    <td>UFIadmin88888</td>
-                </tr>
-                
-                
-     <tr>
-                    <td>ZDX UZ901</td>
-                    <td>Opensimcard</td>
-                </tr>   
-
-     <tr>
-                    <td>影腾5g</td>
-                    <td>12345678</td>
-                </tr>   
-     <tr>
-                    <td>霞昼MF601</td>
-                    <td>MIFI888888</td>
-                </tr>   
-
-     <tr>
-                    <td>抖音zdx-z6</td>
-                    <td>JS668899</td>
-                </tr>   
-
-         
-         
-         
-         
-                <tr>
-    <td>阿里云</td>
-    <td>imei后6位+999</td>
-</tr>
-<tr>
-    <td>新讯充电宝</td>
-    <td>imei后6位+999</td>
-</tr>
-<tr>
-    <td>京东云三网通</td>
-    <td>az952#</td>
-</tr>
-<tr>
-    <td>京东read</td>
-    <td>#359</td>
-</tr>
-<tr>
-    <td>JDread</td>
-    <td>Opensimcard+后6位</td>
-</tr>
-<tr>
-    <td>酷翼</td>
-    <td>admin8888</td>
-</tr>
-<tr>
-    <td>火萌</td>
-    <td>mm888</td>
-</tr>
-<tr>
-    <td>REMO r1869y_a01</td>
-    <td>UFIadmin1234</td>
-</tr>
-<tr>
-    <td>淘宝TD-LTE</td>
-    <td>MIFI888888</td>
-</tr>
-
-
-
-     <tr>
-                    <td>曼炫MZ803_V2.0</td>
-                    <td>MM888</td>
-                </tr>   
-
-     <tr>
-                    <td>淘宝潇熹飞哥</td>
-                    <td>ma846#</td>
-                </tr>   
-                
-                
-                
-                <tr>
-                    <td>白三角</td>
-                    <td>GJ12eN8@das13NB-12</td>
-                </tr>
+                <!-- 表格内容 -->
+                <tr><td>纽曼</td><td>zx952#</td></tr>
+                <tr><td>海尔</td><td>az952#</td></tr>
+                <tr><td>爱国者</td><td>UFIadmin1234</td></tr>
+                <tr><td>长城P1</td><td>boge*#</td></tr>
+                <tr><td>友猫761</td><td>az952#</td></tr>
+                <tr><td>黑疆讯</td><td>az952#</td></tr>
+                <tr><td>雷胜羽</td><td>UFIadmin88888</td></tr>
+                <tr><td>展锐WiFi6</td><td>YH888888</td></tr>
+                <tr><td>展锐</td><td>GJ12eN8das13NB12</td></tr>
+                <tr><td>闪讯宝asr</td><td>GJ12eN8das13NB12</td></tr>
+                <tr><td>海尔1869y</td><td>HAIER0312</td></tr>
+                <tr><td>海尔1358</td><td>HAIER0312</td></tr>
+                <tr><td>xscm</td><td>xscm888</td></tr>
+                <tr><td>FY_uz801_v3.0</td><td>xscm888</td></tr>
+                <tr><td>迅优</td><td>boge*#</td></tr>
+                <tr><td>芷荷</td><td>IMEI后6位+66</td></tr>
+                <tr><td>新讯</td><td>IMEI后6位+66</td></tr>
+                <tr><td>书海asr_jz10c</td><td>UFIadmin88888</td></tr>
+                <tr><td>ZDX UZ901</td><td>Opensimcard</td></tr>
+                <tr><td>影腾5g</td><td>12345678</td></tr>
+                <tr><td>霞昼MF601</td><td>MIFI888888</td></tr>
+                <tr><td>抖音zdx-z6</td><td>JS668899</td></tr>
+                <tr><td>阿里云</td><td>imei后6位+999</td></tr>
+                <tr><td>新讯充电宝</td><td>imei后6位+999</td></tr>
+                <tr><td>京东云三网通</td><td>az952#</td></tr>
+                <tr><td>京东read</td><td>#359</td></tr>
+                <tr><td>JDread</td><td>Opensimcard+后6位</td></tr>
+                <tr><td>酷翼</td><td>admin8888</td></tr>
+                <tr><td>火萌</td><td>mm888</td></tr>
+                <tr><td>REMO r1869y_a01</td><td>UFIadmin1234</td></tr>
+                <tr><td>淘宝TD-LTE</td><td>MIFI888888</td></tr>
+                <tr><td>曼炫MZ803_V2.0</td><td>MM888</td></tr>
+                <tr><td>淘宝潇熹飞哥</td><td>ma846#</td></tr>
+                <tr><td>白三角</td><td>GJ12eN8@das13NB-12</td></tr>
             </tbody>
         </table>
     </main>
     <footer>
         <p>Copyright@ 2024 致情吖</p>
     </footer>
+
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+        </svg>
+    </button>
 </body>
 </html>
