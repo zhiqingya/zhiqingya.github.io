@@ -493,5 +493,49 @@
         "url": "https://www.123pan.com/s/a8uKVv-WKFVh.html"
       }
     ]
+  },
+  {
+    "name": "210系",
+    "note": "恒源光(8G ROM) V3.2固件",
+    "source": "Zy143L",
+    "downloads": [
+      {
+        "label": "下载①",
+        "url": "https://www.123pan.com/s/a8uKVv-FvYVh.html"
+      }
+    ]
+  },
+  {
+    "name": "210系",
+    "note": "注意 帕米康 刷机后 插拔即可开机 恒源需要插拔 红灯 2分钟后从新插拔  即可(需要二次启动(仅首次))",
+    "source": "Zy143L",
+    "downloads": [
+      {
+        "label": "下载①",
+        "url": "https://www.123pan.com/s/a8uKVv-YvYVh.html"
+      }
+    ]
+  },
+  {
+    "name": "210系通用",
+    "note": "经过测试 CPU 步进为4VV/4AA的无法接收电信短信(蓝色板子210通刷)(一定要备份!)",
+    "source": "Zy143L",
+    "downloads": [
+      {
+        "label": "下载①",
+        "url": "https://www.123pan.com/s/a8uKVv-GvYVh.html"
+      }
+    ]
+  },
+  {
+    "name": "讯唐001c",
+    "note": "讯唐001的miko救砖包，预装好桌面,re管理器，面具带root",
+    "source": "开车人",
+    "downloads": [
+      {
+        "label": "下载①",
+        "url": "https://www.123pan.com/s/a8uKVv-PvYVh.html"
+      }
+    ]
   }
 ]
