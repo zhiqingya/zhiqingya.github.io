@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棒子 魔改 固件 | 大自然の搬运工</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gj.html">工具</a></li>
+                <li><a href="qkmm.html">切卡</a></li>
+                <li><a href="yx.html">上传</a></li>
+                <li><a href="gy.html">关于</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="搜索ROM...">
+            <button onclick="searchROM(true)">搜索</button>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div id="rom-list">
+                <!-- 动态加载的ROM项目将插入在这里 -->
+            </div>
+        </section>
+        <section id="search-results">
+            <!-- 搜索结果会显示在这里 -->
+        </section>
+    </main>
+    <footer>
+        <p>Copyright@ 2024 致情吖</p>
+    </footer>
+
+    <!-- 弹出公告 -->
+    <div id="announcement-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.5); z-index:1000; justify-content:center; align-items:center;">
+        <div style="background-color:#fff; padding:20px; border-radius:5px; max-width:300px; text-align:center; position:relative;">
+            <p>本网站固件、工具、教程都搜集于互联网，所有东西仅用于学习用途，所有项目皆是公益永不进行收费（觉得网站不错请用最直接的方式关于→扫一扫→转账进行打赏）如有侵权请联系删除！</p>
+            <button onclick="closeAnnouncement()" style="background: none; border: none; color: #333; font-size: 16px; cursor: pointer; position: absolute; top: 10px; right: 10px;">✖</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('announcement-modal').style.display = 'flex';
+            loadROMs();
+        }
+
+        function closeAnnouncement() {
+            document.getElementById('announcement-modal').style.display = 'none';
+        }
+
+        function loadROMs() {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const romList = document.getElementById('rom-list');
+                    romList.innerHTML = '';
+
+                    data.forEach(item => {
+                        const romItem = document.createElement('div');
+                        romItem.className = 'rom-item';
+                        romItem.innerHTML = `
+                            <h3><a href="${item.downloads[0].url}">${item.name}</a></h3>
+                            <p>备注：<span>${item.note}</span></p>
+                            <p>出处：<span>${item.source}</span></p>
+                            <div class="download-buttons">
+                                ${item.downloads.map(dl => `<button onclick="window.location.href='${dl.url}'">${dl.label}</button>`).join('')}
+                            </div>
+                        `;
+                        romList.appendChild(romItem);
+                    });
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        }
+
+        function searchROM(showResults) {
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            const romList = document.getElementById('rom-list');
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            const romItems = romList.getElementsByClassName('rom-item');
+            let found = false;
+
+            const matchedItems = [];
+
+            for (let i = 0; i < romItems.length; i++) {
+                const item = romItems[i];
+                const note = item.querySelector('p span').textContent.toLowerCase();
+                const name = item.querySelector('h3').textContent.toLowerCase();
+                const source = item.querySelector('p span:nth-child(3)') ? item.querySelector('p span:nth-child(3)').textContent.toLowerCase() : ''; // 检查是否有出处内容
+
+                item.style.display = 'none';
+
+                if (note.includes(query) || name.includes(query) || source.includes(query)) {
+                    const result = document.createElement('div');
+                    result.className = 'rom-item';
+                    result.innerHTML = item.innerHTML;
+                    matchedItems.push(result);
+                    found = true;
+                }
+            }
+
+            if (found) {
+                for (let i = 0; i < matchedItems.length; i++) {
+                    resultsContainer.appendChild(matchedItems[i]);
+                }
+            } else {
+                resultsContainer.innerHTML = '<p>没有找到相关的ROM。</p>';
+            }
+
+            if (showResults) {
+                resultsContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

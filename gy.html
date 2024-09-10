@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打赏</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 80px; /* 调整按钮距离底部的高度 */
+            right: 20px;
+            background-color: rgba(128, 128, 128, 0.7); /* 半透明灰色 */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000; /* 保证按钮在页面最前方 */
+        }
+        .back-button:hover {
+            background-color: rgba(128, 128, 128, 0.9); /* 悬浮时稍微提高透明度 */
+        }
+        .back-button svg {
+            width: 24px;
+            height: 24px;
+            fill: white; /* 图标颜色 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>感谢您的支持</h1>
+    </header>
+    <main>
+        <section class="donation-info">
+            <h2>联系我们</h2>
+            <p><strong>QQ群：</strong>88813694</p>
+            <p><strong>Email：</strong>zhiqingya@foxmail.com</p>
+            <p><strong>网站的服务器+域名+维护也需要一定的成本，您可以扫免费的红包打赏给我们，这是对我们最大的支持！</p>
+        </section>
+
+        <section class="donation-images" style="text-align: center; margin-top: 30px;">
+            <h2>打赏二维码</h2>
+            <div class="image-wrapper" style="display: flex; justify-content: space-around; margin-top: 20px;">
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/hb.jpg" alt="收款码1" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/zfb.jpg" alt="收款码2" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="image-item" style="flex: 1;">
+                    <img src="/tp/wx.png" alt="收款码3" style="max-width: 80%; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright@ 2024 致情吖</p>
+    </footer>
+
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="history.back()">
+        <!-- SVG图标，使用简单的箭头 -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+        </svg>
+    </button>
+</body>
+</html>
